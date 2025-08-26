@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Links from './components/link'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="min-h-screen bg-gradient-to-b from-pink-100 via-blue-100 to-pink-50 flex flex-col items-center p-8 font-sans">
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            {/* 顶部导航链接 */}
+            <Links />
+
+            {/* 中心欢迎文字 */}
+            <main className="flex-1 flex flex-col items-center justify-center text-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-pink-400 mb-6">
+                    欢迎回来！
+                </h1>
+            </main>
+
+        </div>
+    )
 }
 
 export default App
